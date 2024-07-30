@@ -20,7 +20,20 @@
 // "" => false
 // "Daaim" => true
 
-let number = 33
-let stringNumber = String(number)
-console.log(stringNumber);
-console.log(typeof stringNumber);
+// let number = 33
+// let stringNumber = String(number)
+// console.log(stringNumber);
+// console.log(typeof stringNumber);
+
+// ------------------------Operations-----------------------
+// let value = 3
+// let negValue = -value
+// console.log(negValue);
+
+// let str1 = "Mohd Daaim"
+// let str2 = " Khan"
+// let str3 = str1 + str2
+
+// console.log(str3)
+
+
