@@ -1,0 +1,58 @@
+video 25 = How does javascript execute code + call stack 
+
+1- java script execution context
+ a- global execution context <- this - in browser it have windows
+    it is execute in single thread
+ 
+ b- function execution context
+
+ c- eval execution context
+
+how it is executed
+
+1- memory createion phase or creation phase = it locate the memory for the variable
+2- execution phase = it execute the function like + - % etc.
+
+for example =
+
+let val1 = 10
+let val2 = 5
+function addNum(num1, num2){
+    let total = num1 + num2
+    return total
+}
+
+let result1 = addNum(val1, val2)
+let result2 = addNum(3, 5)
+
+step 1- global execution = any code run from global execution and located in the This
+step 2- Memory Creation Phase = it collect all the variables, keep itself, all variable is undefined firstly
+
+        val1 -> undefined
+        val2 -> undefined
+        addNum -> defination
+        result1 -> undefined
+        result2 -> undefined
+
+step 3- Execution Phase
+    here it will take the values
+        val1 <- 10
+        val2 <- 5
+
+        addNum --> it make one more execution context
+environmentsend box -   new variable environment + execution tread = after execution it also deleted
+                            |                                 |
+                        memory phase                    execution context
+                            |                                 |
+                            val1 -> undefined           num1 -> 10
+                            val2 -> undefined           num2 -> 5
+                            total -> undefined          total -> 15
+
+                            here total return to global execution context
+                            Return = it return to the parent execution context or global execution context
+
+        
+                        result1 = 15
+                        result2 = this will do again for the result 2 same as result 1
+
+Call stack - it work same as LIFO last In First Out, we can fount call stack in browser in the source by creatin the snippet same as file
