@@ -1,0 +1,39 @@
+body{
+    background-color: beige;
+}
+
+.canvas{
+    text-align: center;
+}
+
+.button{
+    display: inline-block;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10%;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#grey{
+    background-color: grey;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#green{
+    background-color: green;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#red{
+    background-color: red;
+}
