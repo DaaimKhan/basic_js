@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+        <!-- <li>HTML</li> -->
+    </ul>
+</body>
+<script>
+    // basic code to add the language in the list
+    // function addLanguage(langName){
+    //     const li = document.createElement('li')
+    //     li.innerHTML = `${langName}`
+    //     document.querySelector('.language')
+    //     .appendChild(li)
+    // }
+    // addLanguage("python")
+    // addLanguage("C++")
+
+    // // optimize code for the same
+    // function addOptiLanguage(langName){
+    //     const li = document.createElement('li');
+    //     const addText = document.createTextNode(langName)
+    //     li.appendChild(addText)
+    //     document.querySelector('.language').appendChild(li)
+    // }
+
+    // Or we can remove the addText variable and make it 
+    // in single line
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('Golang')
+
+    // how to edit the value 
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "mojo" this is also good but not optimise approch
+    // edit the value with making complete element
+    const newLi = document.createElement('li');
+    newLi.textContent = "mojo"
+    secondLang.replaceWith(newLi)
+
+    // one more edit example with outhtml
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>typescript</li>'
+
+    // remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
