@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    height: 100vh;          /* Full viewport height */
+    margin: 0;              /* Remove default margin */
+    background-color: beige; /* Optional: Background color */
+}
+
+.container {
+    text-align: center;      /* Center text inside the container */
+    padding: 20px;          /* Optional: Add some padding */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 10px;    /* Optional: Rounded corners */
+    background-color: white; /* Optional: Background color for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;   /* Space between labels and inputs */
+}
+
+button {
+    margin-top: 10px;      /* Space above the button */
+}
+
+#weigh-guide {
+    margin-top: 20px;      /* Space above the weight guide */
+}
