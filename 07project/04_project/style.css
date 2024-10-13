@@ -1,0 +1,210 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Styling */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    color: #34495e;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.para p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+/* Form Styling */
+.form {
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.guessInput {
+    width: 250px; /* Standard width */
+    padding: 10px; /* Padding for better spacing */
+    font-size: 1rem; /* Standard font size */
+    border-radius: 10px; /* Slight rounding for a clean look */
+    border: 2px solid #4d91ff; /* Matching the button's color theme */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guessInput:focus {
+    border-color: #3978e6; /* Slightly darker shade when focused */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow when focused */
+}
+
+
+/* .guessSubmit {
+    padding: 12px 25px;
+    background: linear-gradient(to bottom, #b3d4fc, #66a6ff);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 
+                inset 0 -3px 10px rgba(255, 255, 255, 0.5); 
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.guessSubmit::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    z-index: 1;
+    transform: scale(0);
+    transition: transform 0.4s ease-out;
+}
+.guessSubmit:hover {
+    background: linear-gradient(to bottom, #85b8ff, #66a6ff); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5), 
+                inset 0 -5px 12px rgba(255, 255, 255, 0.6); 
+}
+
+.guessSubmit:hover::before {
+    transform: scale(1.5);
+}
+
+.guessSubmit:active {
+    background: linear-gradient(to bottom, #6ba9ff, #468eff);
+    transform: translateY(2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4), 
+                inset 0 -2px 8px rgba(255, 255, 255, 0.5);
+} */
+
+/* Button Styling - Water Droplet Effect */
+.guessSubmit {
+    padding: 12px 25px;
+    background: linear-gradient(to bottom, #80b4ff, #4d91ff); /* Slightly darker blue shades for a richer look */
+    border: none;
+    border-radius: 50px; /* Fully rounded for water droplet shape */
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 
+                inset 0 -3px 10px rgba(255, 255, 255, 0.5); /* Inner light reflection */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Inner Glow and Reflection for Crystal Look */
+.guessSubmit::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.5); /* Softer white glow */
+    border-radius: 50%;
+    z-index: 1;
+    transform: scale(0);
+    transition: transform 0.4s ease-out;
+}
+
+/* Water-like Ripple Effect */
+.guessSubmit:hover::before {
+    transform: scale(1.5); /* Ripple effect expands */
+}
+
+.guessSubmit:hover {
+    background: linear-gradient(to bottom, #5d9cff, #3978e6); /* Darker shades on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5), 
+                inset 0 -5px 12px rgba(255, 255, 255, 0.6); /* Stronger shadows and glow */
+}
+
+/* Active State - Pressed Water Droplet Effect */
+.guessSubmit:active {
+    background: linear-gradient(to bottom, #4d8aff, #2f6cd6); /* Darkest shade when pressed */
+    transform: translateY(2px); /* Slight press effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4), 
+                inset 0 -2px 8px rgba(255, 255, 255, 0.5); /* Reduced shadows */
+}
+
+
+/* Results Section Styling */
+.resultParas {
+    margin-top: 20px;
+}
+
+.resultParas p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.guesses {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.lastResult {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.loworHi {
+    font-size: 1.2rem;
+    color: #f39c12;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .guessSubmit {
+        width: 100%;
+    }
+}
