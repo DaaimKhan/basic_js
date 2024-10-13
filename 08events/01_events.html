@@ -1,0 +1,85 @@
+<!-- Video 36 = Events in Javascript -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <body style="background-color: #414141; color: aliceblue;">
+            <h2>Amazing image</h2>
+            <div>
+                <ul id="images">
+                    <li><img width="200px" id="photoshop"
+                            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                            alt="photoshop"></li>
+                    <li><img width="200px" id="japan"
+                            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                            alt></li>
+                    <li><img width="200px" id="river"
+                            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                            alt></li>
+                    <li><img width="200px" id="owl"
+                            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                            alt></li>
+                    <li><img width="200px" id="prayer"
+                            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                            alt></li>
+                    <li><a style="color: aliceblue;" href="https://google.com"
+                            id="google">Google</a></li>
+                </ul>
+            </div>
+        </body>
+        <script>
+    // document.getElementById('owl').onclick.function(){
+    //     alert('owl clicked');
+    // }
+
+    // attachEvent()
+    // jQuery
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+    // bubble propagation me neche vali se upar ki id ko track krta h, 
+    // jaha hm click krenge to vaha se upr ke eventlistener ko baad me 
+    // hit krega, agar hm true laga dete hn to fir sb se pehle jo 
+    // eventlistener likha h usko hit krega
+    // agar hme inner element ko alag rakhna h, or uska bubbling na ho to hm
+    // vaha stop propagation laga dete hn e.stopPropagation();
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation();
+    // }, false)
+
+    // // preventDefault()
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     console.log('google clicked')
+    // }, false)
+
+    // example - when click on image than all the images should disappear
+    document.querySelector('#images').addEventListener('click', function(e){
+
+        // console.log(e.target.parentNode); // if we use parentNode than click outside the image it will remove all the image
+        // console.log(e.target.tagName); //  here tagName select default what tag is there same as parentnode also check it by child
+
+        if (e.target.tagName == 'IMG'){
+
+            let removeIt = e.target.parentNode;
+            removeIt.remove()    // 1 approach to remove the image
+            // removeIt.parentNode.removeChild(removeIt) // 2 approach to remove the image
+
+        }
+        
+        
+    }, false)
+ </script>
+    </html>
